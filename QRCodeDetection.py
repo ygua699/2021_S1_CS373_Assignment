@@ -5,6 +5,12 @@ from matplotlib.patches import Rectangle
 import imageIO.png
 
 
+def createInitializedGreyscalePixelArray(image_width, image_height, initValue = 0):
+
+    new_array = [[initValue for x in range(image_width)] for y in range(image_height)]
+    return new_array
+
+
 # this function reads an RGB color png file and returns width, height, as well as pixel arrays for r,g,b
 def readRGBImageToSeparatePixelArrays(input_filename):
 
